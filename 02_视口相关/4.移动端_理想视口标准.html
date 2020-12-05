@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<meta name="viewport" content="width=device-width">
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="demo"></div>
+		<script type="text/javascript" >
+			const demo = document.getElementById('demo')
+			demo.innerHTML = '当前设备的布局视口宽度为：'+document.documentElement.clientWidth+'<br/>'
+			demo.innerHTML += '当前设备的视觉视口宽度为：'+window.innerWidth
+		</script>
+	</body>
+</html>
