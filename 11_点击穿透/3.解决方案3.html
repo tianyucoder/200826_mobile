@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>点击穿透</title>
+	<title>解决方案4</title>
 	<style>
 		*{
 			margin: 0;
@@ -24,6 +24,7 @@
 			background-color: orange;
 			width: 100%;
 			height: 200px;
+			pointer-events: none;
 		}
 		.shade{
 			position: absolute;
@@ -55,11 +56,14 @@
 	</div>
 	<script type="text/javascript" >
 		const shade = document.querySelector('.shade')
+		const banner = document.querySelector('.banner')
 		const btn = document.getElementById('btn')
-	
-		btn.addEventListener('touchstart',(event)=>{
-			event.preventDefault()
+
+		btn.addEventListener('touchstart',()=>{
 			shade.style.display = 'none'
+			setTimeout(()=>{
+				banner.style.pointerEvents = 'auto'
+			},300)
 		})
 	</script>
 </body>

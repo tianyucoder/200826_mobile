@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>点击穿透</title>
+	<title>解决方案2</title>
 	<style>
 		*{
 			margin: 0;
@@ -47,7 +47,7 @@
 </head>
 <body>
 	<div id="app">
-		<a class="banner" href="https://www.baidu.com">点我去百度</a>
+		<div class="banner">点我去百度</div>
 		<div class="shade">
 			<h1>恭喜一等奖</h1>
 			<button id="btn">关闭</button>
@@ -55,11 +55,15 @@
 	</div>
 	<script type="text/javascript" >
 		const shade = document.querySelector('.shade')
+		const banner = document.querySelector('.banner')
 		const btn = document.getElementById('btn')
 	
 		btn.addEventListener('touchstart',(event)=>{
-			event.preventDefault()
 			shade.style.display = 'none'
+		})
+		
+		banner.addEventListener('touchstart',(event)=>{
+			location.href = 'https://www.baidu.com'
 		})
 	</script>
 </body>

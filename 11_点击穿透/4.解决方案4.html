@@ -56,10 +56,11 @@
 	<script type="text/javascript" >
 		const shade = document.querySelector('.shade')
 		const btn = document.getElementById('btn')
-	
-		btn.addEventListener('touchstart',(event)=>{
-			event.preventDefault()
-			shade.style.display = 'none'
+		
+		btn.addEventListener('touchstart',()=>{
+			setTimeout(()=>{
+				shade.style.display = 'none'
+			},300)
 		})
 	</script>
 </body>
